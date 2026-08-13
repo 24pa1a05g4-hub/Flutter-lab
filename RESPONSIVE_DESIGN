@@ -126,12 +126,13 @@ class _MyAppState extends State<MyApp> {
             appBar: AppBar(
               title: const Text("Responsive UI"),
             ),
+
             drawer: Drawer(
               child: ListView(
                 children: [
                   const DrawerHeader(
                     decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: Colors.red,
                     ),
                     child: Text(
                       "Menu",
@@ -141,6 +142,7 @@ class _MyAppState extends State<MyApp> {
                       ),
                     ),
                   ),
+
                   ListTile(
                     leading: const Icon(Icons.home),
                     title: const Text("Home"),
@@ -149,6 +151,7 @@ class _MyAppState extends State<MyApp> {
                       Navigator.pop(context);
                     },
                   ),
+
                   ListTile(
                     leading: const Icon(Icons.message),
                     title: const Text("Messages"),
@@ -157,6 +160,7 @@ class _MyAppState extends State<MyApp> {
                       Navigator.pop(context);
                     },
                   ),
+
                   ListTile(
                     leading: const Icon(Icons.photo),
                     title: const Text("Photos"),
@@ -168,6 +172,7 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
             ),
+
             body: Center(
               child: width < 600
                   ? Column(
@@ -179,15 +184,17 @@ class _MyAppState extends State<MyApp> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
+
                         Expanded(
                           child: Image.network(
-                            'https://images.unsplash.com/photo-1580582932707-520aed937b7b',
+                            'https://images.unsplash.com/photo-1635805737707-575885ab0820',
                             width: double.infinity,
                             fit: BoxFit.cover,
                           ),
                         ),
                       ],
                     )
+
                   : width < 900
                       ? Column(
                           children: [
@@ -198,23 +205,26 @@ class _MyAppState extends State<MyApp> {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+
                             Expanded(
                               child: Image.network(
-                                'https://images.unsplash.com/photo-1580582932707-520aed937b7b',
+                                'https://images.unsplash.com/photo-1635805737707-575885ab0820',
                                 width: double.infinity,
                                 fit: BoxFit.cover,
                               ),
                             ),
                           ],
                         )
+
                       : Row(
                           children: [
                             Expanded(
                               child: Image.network(
-                                'https://images.unsplash.com/photo-1580582932707-520aed937b7b',
+                                'https://images.unsplash.com/photo-1635805737707-575885ab0820',
                                 fit: BoxFit.cover,
                               ),
                             ),
+
                             Expanded(
                               child: Center(
                                 child: Text(
@@ -235,5 +245,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-//
